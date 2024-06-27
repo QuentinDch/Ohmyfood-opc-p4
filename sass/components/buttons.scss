@@ -1,7 +1,12 @@
-//BUTTONS=================================
-.hero__btn {
-  padding: 0.96rem 1.37rem;
-  border-radius: 25px;
+@import "../mixins/mixins.scss";
+
+// //BUTTONS=================================
+
+.btn {
+  @include flex-center;
+  margin: auto;
+  height: 50px;
+  border-radius: 9999px;
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
@@ -18,4 +23,12 @@
     opacity: 0.8;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
   }
+}
+
+.btn--primary {
+  width: 218px;
+}
+
+.btn--secondary {
+  width: 186px;
 }

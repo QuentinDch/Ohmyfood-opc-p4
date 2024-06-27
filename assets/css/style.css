@@ -1,11 +1,14 @@
-/* Imported variables */
-/* Imported mixins */
-/* Imported buttons */
+/* Imported components */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.hero__btn {
-  padding: 0.96rem 1.37rem;
-  border-radius: 25px;
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  height: 50px;
+  border-radius: 9999px;
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
@@ -14,11 +17,21 @@
   box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.25);
   transition: opacity 300ms ease-out, box-shadow 300ms ease-out;
 }
-.hero__btn:hover {
+.btn:hover {
   opacity: 0.8;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
 
+.btn--primary {
+  width: 218px;
+}
+
+.btn--secondary {
+  width: 186px;
+}
+
+/* Imported mixins */
+/* Imported variables */
 /* Imported fonts */
 /********** General ***********/
 *,
@@ -42,7 +55,6 @@ body {
 
 .main-container {
   width: 100%;
-  max-width: 1440px;
   min-width: 320px;
 }
 
@@ -56,6 +68,7 @@ body {
 @media screen and (min-width: 1024px) {
   .header__logo {
     height: 96px;
+    box-shadow: none;
   }
 }
 .header__logo-svg {
@@ -71,13 +84,19 @@ body {
   height: 50px;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .header__location {
+    box-shadow: none;
+  }
+}
 .header__location-text {
   display: inline-block;
-  color: #353535;
-  font-weight: 500;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #353535;
+  font-weight: 500;
   position: relative;
 }
 .header__location-text::before {
@@ -90,19 +109,115 @@ body {
 
 /********** Hero **********/
 .hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
   padding: 2rem;
   background-color: #f6f6f6;
-  text-align: center;
-}
-
-.hero__title {
-  margin-bottom: 1rem;
 }
 
 .hero__subtitle {
   font-size: 1.125rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
+/********** Process__Step **********/
+.process {
+  padding: 2.5rem 2rem;
+}
+.process__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.process__list {
+  counter-reset: comptlist;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .process__list {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.process__step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 320px;
+  height: 70px;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.process__step::before {
+  content: counter(comptlist);
+  counter-increment: comptlist;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 24px;
+  width: 24px;
+  border-radius: 9999px;
+  background-color: #9356dc;
+  color: #fff;
+}
+
+/********** Process__StepICON **********/
+.icon1::before {
+  content: "\f3cd";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 50px;
+  color: #7e7e7e;
+}
+
+.icon2::before {
+  content: "\f0ca";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 50px;
+  color: #7e7e7e;
+}
+
+.icon3::before {
+  content: "\f54e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 50px;
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
