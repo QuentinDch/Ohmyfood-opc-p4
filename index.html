@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil - Ohmyfood!</title>
+    <meta
+      name="description"
+      content="Découvrez Ohmyfood : commandez des repas en ligne et réduisez votre temps d'attente. Savourez des menus gastronomiques à Paris, préparés à l'avance."
+    />
+    <link
+      rel="icon"
+      href="./assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -29,11 +38,11 @@
       </header>
       <main>
         <section class="hero">
-          <h2 class="hero__title">Réservez le menu qui vous convient</h2>
+          <h1 class="hero__title">Réservez le menu qui vous convient</h1>
           <p class="hero__subtitle">
             Découvrez des restaurants d'exception, séléctionnés par nos soins.
           </p>
-          <a href="#restaurants" class="btn btn--primary"
+          <a role="button" href="#restaurants" class="btn btn--primary"
             >Explorer nos restaurants</a
           >
         </section>
@@ -146,13 +155,17 @@
       </main>
       <footer class="footer">
         <div class="footer__container">
-          <h4 class="footer__title">ohmyfood</h4>
-          <ul class="footer__list">
-            <li><a href="#">Proposer un restaurant</a></li>
-            <li><a href="#">Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <h4 class="footer__title">
+            <a href="#" aria-current="page">ohmyfood</a>
+          </h4>
+          <nav aria-label="Liens de navigation du pied de page">
+            <ul class="footer__list">
+              <li><a href="#">Proposer un restaurant</a></li>
+              <li><a href="#">Devenir partenaire</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+            </ul>
+          </nav>
         </div>
       </footer>
     </div>
