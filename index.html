@@ -19,7 +19,7 @@
         <div class="header__logo">
           <img
             class="header__logo-svg"
-            src="./assets/Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg"
+            src="./assets/images/logo/ohmyfood@2x.svg"
             alt="logo du site Ohmyfood"
           />
         </div>
@@ -33,7 +33,9 @@
           <p class="hero__subtitle">
             Découvrez des restaurants d'exception, séléctionnés par nos soins.
           </p>
-          <a class="btn btn--primary">Explorer nos restaurants</a>
+          <a href="#restaurants" class="btn btn--primary"
+            >Explorer nos restaurants</a
+          >
         </section>
         <section class="process">
           <div class="process__container">
@@ -51,9 +53,108 @@
             </ol>
           </div>
         </section>
-        <section class="restaurants"></section>
+        <section class="restaurants" id="restaurants">
+          <div class="restaurants__container">
+            <h2>Restaurants</h2>
+            <div class="cards__container">
+              <article class="card">
+                <a
+                  href="#"
+                  aria-label="Voir les détails du restaurant La palette du goût"
+                >
+                  <div class="card__txt">
+                    <i
+                      class="fa-regular fa-heart card__heart"
+                      aria-hidden="true"
+                    ></i>
+                    <h3 class="card__txt-title">La palette du goût</h3>
+                    <p class="card__txt-subtitle">Ménilmontant</p>
+                  </div>
+                  <figure>
+                    <img
+                      src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                      alt="Plat du restaurant La palette du goût à Ménilmontant"
+                    />
+                    <figcaption class="card__new">Nouveau</figcaption>
+                  </figure>
+                </a>
+              </article>
+              <article class="card">
+                <a
+                  href="#"
+                  aria-label="Voir les détails du restaurant La note enchantée"
+                >
+                  <div class="card__txt">
+                    <i
+                      class="fa-regular fa-heart card__heart"
+                      aria-hidden="true"
+                    ></i>
+                    <h3 class="card__txt-title">La note enchantée</h3>
+                    <p class="card__txt-subtitle">Charonne</p>
+                  </div>
+                  <figure>
+                    <img
+                      src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                      alt="Plat du restaurant La note enchantée à Charonne"
+                    />
+                    <figcaption class="card__new">Nouveau</figcaption>
+                  </figure>
+                </a>
+              </article>
+              <article class="card">
+                <a
+                  href="#"
+                  aria-label="Voir les détails du restaurant À la française"
+                >
+                  <div class="card__txt">
+                    <i
+                      class="fa-regular fa-heart card__heart"
+                      aria-hidden="true"
+                    ></i>
+                    <h3 class="card__txt-title">À la française</h3>
+                    <p class="card__txt-subtitle">Cité rouge</p>
+                  </div>
+                  <figure>
+                    <img
+                      src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                      alt="Plat du restaurant À la française à Cité rouge"
+                    />
+                  </figure>
+                </a>
+              </article>
+              <article class="card">
+                <a href="#" aria-label="Voir les détails du Le délice des sens">
+                  <div class="card__txt">
+                    <i
+                      class="fa-regular fa-heart card__heart"
+                      aria-hidden="true"
+                    ></i>
+                    <h3 class="card__txt-title">Le délice des sens</h3>
+                    <p class="card__txt-subtitle">Folie-Méricourt</p>
+                  </div>
+                  <figure>
+                    <img
+                      src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                      alt="Plat du restaurant Le délice des sens à Folie-Méricourt"
+                    />
+                  </figure>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__container">
+          <h4 class="footer__title">ohmyfood</h4>
+          <ul class="footer__list">
+            <li><a href="#">Proposer un restaurant</a></li>
+            <li><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
