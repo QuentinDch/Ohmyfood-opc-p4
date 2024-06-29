@@ -32,6 +32,11 @@ body {
   justify-content: center;
 }
 
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
 .main-container {
   width: 100%;
   max-width: 1440px;
@@ -252,7 +257,7 @@ body {
   }
 
   &__new {
-    background: #99e2d0;
+    background-color: $tertiary-color;
     color: #008766;
     font-size: 0.875rem;
     font-weight: 500;
@@ -265,7 +270,7 @@ body {
   }
 }
 
-/********** RestaurantsCARDS-txt-HEART **********/
+/********** RestaurantsCARDS-txt **********/
 
 .card__txt {
   padding: 0.5rem 1rem;
@@ -282,28 +287,11 @@ body {
   }
 }
 
-.card__heart {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-
-  &:hover {
-    font-weight: bold;
-    background-clip: text;
-    // prend la color du background
-    color: transparent;
-    background-image: linear-gradient(to bottom, #9356dc, #ff79da);
-    transition: all 300ms ease-out;
-  }
-}
-
 /********** Footer **********/
 
 .footer {
   padding: 1.5rem;
-  background: #353535;
+  background-color: #353535;
 
   &__container {
     color: #fff;
