@@ -4,6 +4,8 @@
 @import "./mixins/mixins.scss";
 /* Imported variables */
 @import "./variables.scss";
+/* Imported layouts */
+@import "./layouts/footer.scss";
 /* Imported fonts */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
@@ -199,6 +201,30 @@ button {
   color: $primary-color;
 }
 
+// // Nom du mixin `icon-style`
+// // Mixin regroupe les propriétés communes des icônes pour éviter la répétition
+// 2 paramètres $content pour l'icone et $color avec une valeur par défaut
+// @mixin icon-style($content, $color: #7e7e7e) {
+//   content: $content;
+//   font-family: "Font Awesome 5 Free";
+//   font-weight: 900;
+//   @include absolute-center;
+//   left: 50px;
+//   color: $color;
+// }
+
+// .iconStep1::before {
+//   @include icon-style("\f3cd");
+// }
+
+// .iconStep2::before {
+//   @include icon-style("\f0ca");
+// }
+
+// .iconStep3::before {
+//   @include icon-style("\f54e", $primary-color);
+// }
+
 /********** Restaurants **********/
 
 .restaurants {
@@ -283,88 +309,5 @@ button {
   &--subtitle {
     font-size: 1.063rem;
     font-weight: 300;
-  }
-}
-
-/********** Footer **********/
-
-.footer {
-  padding: 1.5rem;
-  background-color: #353535;
-
-  &__container {
-    color: #fff;
-  }
-}
-
-.footer__title {
-  font-family: "Shrikhand", serif;
-  font-style: italic;
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.footer__list {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-
-  & li {
-    position: relative;
-  }
-
-  & a:hover {
-    text-decoration: underline;
-  }
-}
-
-.footer__list li:nth-child(1),
-.footer__list li:nth-child(2) {
-  margin-left: 30px;
-}
-
-.footer__list li:first-child::before {
-  content: "\f2e7";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  transform: translateY(-50%);
-}
-
-.footer__list li:nth-child(2)::before {
-  content: "\f4c4";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  transform: translateY(-50%);
-}
-
-@media screen and (min-width: 1024px) {
-  .footer {
-    padding: 3rem 1.5rem 1.5rem;
-  }
-
-  .footer__container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-
-  .footer__title {
-    margin-left: 5rem;
-  }
-
-  .footer__list {
-    flex-direction: row;
-    gap: 1rem;
-
-    & li:nth-child(2) {
-      margin-right: 4rem;
-    }
   }
 }
