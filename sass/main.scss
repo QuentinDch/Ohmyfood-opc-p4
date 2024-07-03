@@ -56,7 +56,7 @@ button {
     box-shadow: none;
   }
 
-  &-svg {
+  &--svg {
     @include absolute-center;
   }
 }
@@ -71,7 +71,7 @@ button {
     box-shadow: none;
   }
 
-  &-text {
+  &--text {
     display: inline-block;
     @include absolute-center;
     color: #353535;
@@ -79,7 +79,7 @@ button {
     position: relative;
   }
 
-  &-text::before {
+  &--text::before {
     content: "\f3c5";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -172,7 +172,7 @@ button {
 
 /********** Process__StepICON **********/
 
-.icon1::before {
+.iconStep1::before {
   content: "\f3cd";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -181,7 +181,7 @@ button {
   color: #7e7e7e;
 }
 
-.icon2::before {
+.iconStep2::before {
   content: "\f0ca";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -190,13 +190,13 @@ button {
   color: #7e7e7e;
 }
 
-.icon3::before {
+.iconStep3::before {
   content: "\f54e";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   @include absolute-center;
   left: 50px;
-  color: #9356dc;
+  color: $primary-color;
 }
 
 /********** Restaurants **********/
@@ -222,7 +222,6 @@ button {
   }
 
   @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
     row-gap: 3.125rem;
     column-gap: 6.25rem;
   }
@@ -277,11 +276,11 @@ button {
   line-height: 1.5;
   position: relative;
 
-  &-title {
+  &--title {
     font-size: 1.125rem;
   }
 
-  &-subtitle {
+  &--subtitle {
     font-size: 1.063rem;
     font-weight: 300;
   }
