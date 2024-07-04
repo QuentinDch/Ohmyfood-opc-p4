@@ -133,19 +133,28 @@
 /* Imported menupages */
 /********** Hearder **********/
 .header__goback {
-  font-size: 1.5rem;
-  width: 30px;
-  height: 30px;
   position: absolute;
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
+  z-index: 10;
+}
+.header__goback--link {
+  width: 38px;
+  height: 38px;
+  border-radius: 9999px;
+  background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 10;
-  transition: all 3s ease-out;
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 450ms;
+}
+.header__goback--link:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 /********** ImgMenu **********/
@@ -233,6 +242,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .submenus-item {
