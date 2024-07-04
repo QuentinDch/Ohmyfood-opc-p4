@@ -14,6 +14,7 @@
   color: #fff;
   cursor: pointer;
   background: linear-gradient(360deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 110%);
+  opacity: 1;
   box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.25);
   transition: opacity 300ms ease-out, box-shadow 300ms ease-out;
 }
@@ -159,6 +160,10 @@ button {
 }
 
 /********** Hearder **********/
+.header {
+  position: relative;
+}
+
 .header__logo {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   height: 63px;
@@ -178,18 +183,19 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.header__location {
+/********** Location **********/
+.location {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: #eaeaea;
   height: 50px;
   position: relative;
 }
 @media screen and (min-width: 1024px) {
-  .header__location {
+  .location {
     box-shadow: none;
   }
 }
-.header__location--text {
+.location__text {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -199,7 +205,7 @@ button {
   font-weight: 500;
   position: relative;
 }
-.header__location--text::before {
+.location__text::before {
   content: "\f3c5";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -408,6 +414,23 @@ button {
 .card__txt--subtitle {
   font-size: 1.063rem;
   font-weight: 300;
+}
+
+/********** Hearder **********/
+.header__goback {
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  transition: all 3s ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */
