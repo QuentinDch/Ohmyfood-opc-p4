@@ -123,6 +123,111 @@
     margin-right: 4rem;
   }
 }
+/* Imported menupages */
+/********** Hearder **********/
+.header__goback {
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  transition: all 3s ease-out;
+}
+
+/********** ImgMenu **********/
+.hero-img {
+  width: 100%;
+  max-height: 383px;
+  object-fit: cover;
+}
+
+/********** MenuContainer **********/
+.menu-container {
+  max-width: 1200px;
+  background: #f6f6f6;
+  margin: auto;
+  padding: 2.5rem 1rem;
+  border-radius: 40px 40px 0 0;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/********** RestaurantTitle **********/
+.restaurant {
+  position: relative;
+}
+.restaurant__title {
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Shrikhand", serif;
+  color: #101010;
+}
+
+/********** Submenus **********/
+.submenus {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.submenus__title {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  position: relative;
+}
+.submenus__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  width: 40px;
+  height: 3px;
+  background: #99e2d0;
+}
+
+/********** Menu **********/
+.submenus__menu {
+  background-color: #fff;
+  width: 100%;
+  height: 69px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.menu__txt--title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.menu__txt--description {
+  font-size: 0.938rem;
+  font-weight: 300;
+}
+
+.menu__price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+}
+
 /* Imported fonts */
 /********** General ***********/
 *,
@@ -414,23 +519,6 @@ button {
 .card__txt--subtitle {
   font-size: 1.063rem;
   font-weight: 300;
-}
-
-/********** Hearder **********/
-.header__goback {
-  font-size: 1.5rem;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 10;
-  transition: all 3s ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */
