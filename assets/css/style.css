@@ -31,11 +31,10 @@
   width: 186px;
 }
 
-/********** CARD BUTTON heart **********/
+/********** buttonHeart **********/
 .btn__like {
   position: absolute;
   top: 50%;
-  right: 10px;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
 }
@@ -45,6 +44,14 @@
   color: transparent;
   background-image: linear-gradient(to bottom, #9356dc, #ff79da);
   transition: all 300ms ease-out;
+}
+
+.btn--homePage {
+  right: 10px;
+}
+
+.btn--menuRestaurant {
+  right: -65px;
 }
 
 /* Imported mixins */
@@ -162,33 +169,52 @@
   flex-direction: column;
   gap: 2.5rem;
 }
+@media screen and (min-width: 768px) {
+  .menu-container {
+    align-items: center;
+  }
+}
 
 /********** RestaurantTitle **********/
-.restaurant {
-  position: relative;
-}
 .restaurant__title {
   font-size: 1.75rem;
   font-style: italic;
   font-weight: 400;
   font-family: "Shrikhand", serif;
   color: #101010;
+  position: relative;
+  display: inline-block;
+}
+@media screen and (max-width: 375px) {
+  .restaurant__title {
+    font-size: 1.5rem;
+  }
 }
 
 /********** Submenus **********/
-.submenus {
+.menus {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
-.submenus__title {
+@media screen and (min-width: 768px) {
+  .menus {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menus {
+    width: 634px;
+  }
+}
+.menus__title {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 4px;
   position: relative;
 }
-.submenus__title::after {
+.menus__title::after {
   content: "";
   display: block;
   position: absolute;
@@ -199,30 +225,39 @@
 }
 
 /********** Menu **********/
-.submenus__menu {
+.menus__submenus {
   background-color: #fff;
-  width: 100%;
+  max-width: 100%;
   height: 69px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.menu-item {
+.submenus-item {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.menu__txt--title {
+.submenus__txt {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.submenus__txt--title {
   font-size: 1.125rem;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu__txt--description {
+.submenus__txt--description {
   font-size: 0.938rem;
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.menu__price {
+.submenus__price {
   display: flex;
   align-items: flex-end;
   font-weight: bold;

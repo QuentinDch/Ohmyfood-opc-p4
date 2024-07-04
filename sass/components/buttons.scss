@@ -34,12 +34,11 @@
   width: 186px;
 }
 
-/********** CARD BUTTON heart **********/
+/********** buttonHeart **********/
 
 .btn__like {
   position: absolute;
   top: 50%;
-  right: 10px;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
 
@@ -51,4 +50,12 @@
     background-image: linear-gradient(to bottom, #9356dc, #ff79da);
     transition: all 300ms ease-out;
   }
+}
+
+.btn--homePage {
+  right: 10px;
+}
+
+.btn--menuRestaurant {
+  right: -65px;
 }

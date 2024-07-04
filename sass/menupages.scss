@@ -35,28 +35,44 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
 }
 
 /********** RestaurantTitle **********/
 
 .restaurant {
-  position: relative;
-
   &__title {
     font-size: 1.75rem;
     font-style: italic;
     font-weight: 400;
     font-family: "Shrikhand", serif;
     color: #101010;
+    position: relative;
+    display: inline-block;
+
+    @media screen and (max-width: 375px) {
+      font-size: 1.5rem;
+    }
   }
 }
 
 /********** Submenus **********/
 
-.submenus {
+.menus {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+
+  @media screen and (min-width: 768px) {
+    width: 75%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 634px;
+  }
 
   &__title {
     font-size: 1rem;
@@ -79,35 +95,43 @@
 
 /********** Menu **********/
 
-.submenus {
-  &__menu {
+.menus {
+  &__submenus {
     background-color: #fff;
-    width: 100%;
+    max-width: 100%;
     height: 69px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 }
 
-.menu-item {
+.submenus-item {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.menu__txt {
+.submenus__txt {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   &--title {
     font-size: 1.125rem;
     font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &--description {
     font-size: 0.938rem;
     font-weight: 300;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 
-.menu__price {
+.submenus__price {
   display: flex;
   align-items: flex-end;
   font-weight: bold;
