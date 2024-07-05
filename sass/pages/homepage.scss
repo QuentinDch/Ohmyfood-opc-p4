@@ -1,0 +1,225 @@
+//HOMEPAGE========================================
+.location {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #eaeaea;
+  height: 50px;
+  position: relative;
+
+  @media screen and (min-width: 1024px) {
+    box-shadow: none;
+  }
+
+  &__text {
+    display: inline-block;
+    @include absolute-center;
+    color: #353535;
+    font-weight: 500;
+    position: relative;
+  }
+
+  &__text::before {
+    content: "\f3c5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: -25px;
+  }
+}
+
+/********** Hero **********/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: $background-color;
+
+  &__subtitle {
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+/********** Process__Step **********/
+
+.process {
+  padding: 2.5rem 2rem;
+
+  &__container {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+
+.process__list {
+  counter-reset: comptlist;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 0;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.process__step {
+  @include flex-center;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: $background-color;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 75%;
+  }
+}
+
+.process__step::before {
+  content: counter(comptlist);
+  counter-increment: comptlist;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  @include flex-center;
+  height: 24px;
+  width: 24px;
+  border-radius: 9999px;
+  background-color: $primary-color;
+  color: #fff;
+}
+
+/********** Process__StepICON **********/
+
+.iconStep1::before {
+  content: "\f3cd";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  @include absolute-center;
+  left: 50px;
+  color: #7e7e7e;
+}
+
+.iconStep2::before {
+  content: "\f0ca";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  @include absolute-center;
+  left: 50px;
+  color: #7e7e7e;
+}
+
+.iconStep3::before {
+  content: "\f54e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  @include absolute-center;
+  left: 50px;
+  color: $primary-color;
+}
+
+/********** Restaurants **********/
+
+.restaurants {
+  padding: 2.5rem 1rem;
+  background-color: $background-color;
+
+  &__container {
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+
+.cards__container {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1024px) {
+    row-gap: 3.125rem;
+    column-gap: 6.25rem;
+  }
+}
+
+/********** RestaurantsCARDS-NEW **********/
+
+.card {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+
+  & a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & figure {
+    order: -1;
+  }
+
+  & img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+
+    @media screen and (min-width: 1024px) {
+      height: 200px;
+    }
+  }
+
+  &__new {
+    background-color: $tertiary-color;
+    color: #008766;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+    border-radius: 2px;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+  }
+}
+
+/********** RestaurantsCARDS-txt **********/
+
+.card__txt {
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  position: relative;
+
+  &--title {
+    font-size: 1.125rem;
+  }
+
+  &--subtitle {
+    font-size: 1.063rem;
+    font-weight: 300;
+  }
+}

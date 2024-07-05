@@ -1,0 +1,20 @@
+//HEADER========================================
+.header {
+  position: relative;
+}
+
+.header__logo {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  height: 63px;
+  position: relative;
+  z-index: 10;
+
+  @media screen and (min-width: 1024px) {
+    height: 96px;
+    box-shadow: none;
+  }
+
+  &--svg {
+    @include absolute-center;
+  }
+}

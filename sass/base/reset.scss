@@ -1,0 +1,34 @@
+//RESET GENERAL========================================
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  list-style: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+}
