@@ -38,7 +38,6 @@
 
 .btn__like {
   position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
 
@@ -54,8 +53,10 @@
 
 .btn--homePage {
   right: 10px;
+  bottom: 5px;
 }
 
 .btn--menuRestaurant {
+  top: 50%;
   right: -65px;
 }
