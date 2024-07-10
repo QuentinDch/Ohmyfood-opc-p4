@@ -11,13 +11,13 @@ Quatrième projet du parcours **"Intégrateur web"** chez OpenClassroom. <br> L'
 - **Utilisation de Sass** : Utiliser Sass pour écrire des styles plus organisés et maintenables.
 - **Gestion de version avec Git et GitHub** : Versionner le projet pour une gestion efficace et une collaboration facilitée.
 
-## Lien du Site
-
-Vous pouvez visiter le site [OhMyFood](https://quentindch.github.io/opc-p4/) pour voir le résultat final.
-
 ## Technologies Utilisées
 
 - **HTML5**
 - **CSS3**
 - **Sass**
 - **Git et GitHub**
+
+## Lien du Site
+
+Vous pouvez visiter le site [OhMyFood](https://quentindch.github.io/opc-p4/) pour voir le résultat final.
