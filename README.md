@@ -20,4 +20,4 @@ Quatrième projet du parcours **"Intégrateur web"** chez OpenClassroom. <br> L'
 
 ## Lien du Site
 
-Vous pouvez visiter le site [OhMyFood](https://quentindch.github.io/opc-p4/) pour voir le résultat final.
+Vous pouvez visiter le site [OhMyFood](https://quentindch.github.io/Ohmyfood-opc-p4/) pour voir le résultat final.
